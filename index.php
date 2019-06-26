@@ -1,7 +1,6 @@
 <?php 
 
 // original code of index.php file, shows path of the variables 
-#echo get_defined_vars();
 #var_dump($_SERVER);
 
 // Break Lines/ Seperate the sections of code 
