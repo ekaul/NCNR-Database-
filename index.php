@@ -1,13 +1,33 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+<style>
+body {
+  background-color: lightpink;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+</style>
+<h1> <center> Directory List </center>  </h1> 
+<h4> You will find the file and folder names below: </h4>
+
 <?php 
 
 // original code of index.php file, shows path of the variables 
 #var_dump($_SERVER);
 
-// Break Lines/ Seperate the sections of code 
-echo nl2br("\n \r\n You will find the file names below on the browser window:\r\n \r\n");
-
+// Changes ~esk2 to home/esk2/public_html
 $requestedpath = $_SERVER["REQUEST_URI"];
 $realRequestedPath = str_replace("~esk2", "home/esk2/public_html", $requestedpath);
+
 // Displays the files?? 
 $dir = new DirectoryIterator($realRequestedPath);
 foreach ($dir as $fileinfo) {
@@ -17,3 +37,6 @@ foreach ($dir as $fileinfo) {
 }
 
 ?> 
+
+</body> 
+</html> 
