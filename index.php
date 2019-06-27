@@ -24,9 +24,6 @@ p {
 
 <?php 
 
-// original code of index.php file, shows path of the variables 
-#var_dump($_SERVER);
-
 // Changes ~esk2 to home/esk2/public_html
 $requestedpath = $_SERVER["REQUEST_URI"];
 $realRequestedPath = str_replace("~esk2", "home/esk2/public_html", $requestedpath);
