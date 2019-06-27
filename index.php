@@ -1,9 +1,11 @@
 <!DOCTYPE html> 
 <html> 
-<body> 
+<body>
+<!-- CSS Style Formatting -->
+
 <style>
 body {
-  background-color: lightpink;
+  background-color: lightblue;
 }
 
 h1 {
@@ -16,6 +18,7 @@ p {
   font-size: 20px;
 }
 </style>
+
 <h1> <center> Directory List </center>  </h1> 
 <h4> You will find the file and folder names below: </h4>
 
@@ -28,7 +31,7 @@ p {
 $requestedpath = $_SERVER["REQUEST_URI"];
 $realRequestedPath = str_replace("~esk2", "home/esk2/public_html", $requestedpath);
 
-// Displays the files?? 
+// Displays the file and folder names  
 $dir = new DirectoryIterator($realRequestedPath);
 foreach ($dir as $fileinfo) {
     if (!$fileinfo->isDot()) {
