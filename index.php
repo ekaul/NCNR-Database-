@@ -5,7 +5,7 @@
 
 <style>
 body {
-  background-color: lightblue;
+  background-color: #E6E6E6;
 }
 
 h1 {
@@ -19,7 +19,7 @@ p {
 }
 </style>
 
-<h1> <center> Directory List </center>  </h1> 
+<h1> <center> NIST Center for Neutron Research Data Directory </center>  </h1> 
 <h4> You will find the file and folder names below: </h4>
 
 <?php 
