@@ -24,8 +24,12 @@ p {
 
 <?php 
 
+// Creates a path to the directory of each folder, instead of just the directory of index.php
+$requestedpath = $_SERVER["REQUEST_URI"];
+$realRequestedPath = str_replace("~esk2", "home/esk2/public_html", $requestedpath);
+
 // Open this directory 
-$myDirectory = opendir(".");
+$myDirectory = opendir($realRequestedPath);
 
 // Get each entry
 while($entryName = readdir($myDirectory)) {
