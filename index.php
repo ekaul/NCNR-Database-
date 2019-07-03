@@ -39,7 +39,7 @@ while($entryName = readdir($myDirectory)) {
 // Close directory
 closedir($myDirectory);
 
-//  Count elements in array
+// Count elements in array
 $indexCount = count($dirArray);
 Print ("$indexCount files<br>\n");
 
@@ -48,15 +48,15 @@ sort($dirArray);
 
 // Print them
 print("<TABLE border=1 cellpadding=5 cellspacing=0 class=whitelinks>\n");
-print("<TR><TH>Filename</TH><th>Filetype</th><th>Filesize</th></TR>\n");
+print("<TR><TH>Filename</TH> <th>Filetype</th> <th>Filesize</th> </TR>\n");
 
 // Loop through the array of files and print them all
 for($index=0; $index < $indexCount; $index++) {
         if (substr("$dirArray[$index]", 0, 1) != "."){ // don't list hidden files
-        print("<TR><TD><a href=\"$dirArray[$index]\">$dirArray[$index]</a></td>");
-        print("<td>");  print(filetype($dirArray[$index])); print("</td>");
-        print("<td>");  print(filesize($dirArray[$index])); print("</td>");
-        print("</TR>\n");
+          print("<TR><TD><a href=\"$dirArray[$index]\">$dirArray[$index]</a></td>");
+          print("<td>");  print(filetype($dirArray[$index])); print("</td>");
+          print("<td>");  print(filesize($dirArray[$index])); print("</td>");
+          print("</TR>\n");
     }
 }
 print("</TABLE>\n");
