@@ -54,8 +54,8 @@ print("<TR><TH>Filename</TH> <th>Filetype</th> <th>Filesize</th> </TR>\n");
 for($index=0; $index < $indexCount; $index++) {
         if (substr("$dirArray[$index]", 0, 1) != "."){ // don't list hidden files
           print("<TR><TD><a href=\"$dirArray[$index]\">$dirArray[$index]</a></td>");
-          print("<td>");  print(filetype($dirArray[$index])); print("</td>");
-          print("<td>");  print(filesize($dirArray[$index])); print("</td>");
+          print("<td>");  print(filetype($realRequestedPath . DIRECTORY_SEPARATOR. $dirArray[$index])); print("</td>");
+          print("<td>");  print(filesize($realRequestedPath . DIRECTORY_SEPARATOR. $dirArray[$index])); print("</td>");
           print("</TR>\n");
     }
 }
