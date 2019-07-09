@@ -2,34 +2,14 @@
 <html> 
 <body>
 
-<!-- CSS Style Formatting -->
-
-<style>
-body {
-  background-color: lightsteelblue;
-}
-
-h1 {
-  color: black;
-  text-align: justify;
-}
-
-p {
-  font-family: verdana;
-  font-size: 20px;
-}
-
-}
-
-
-</style>
-
 <head> 
 
 <h1> <center> NIST Center for Neutron Research Data Directory </center>  </h1> 
 <h4> You will find the file and folder names below: </h4>
 
+<!-- CSS Style Formatting -->
 <link rel="stylesheet" type="text/css" href="style.css">
+
 </head> 
 
 <?php 
