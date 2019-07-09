@@ -1,26 +1,36 @@
 <!DOCTYPE html> 
 <html> 
 <body>
+
 <!-- CSS Style Formatting -->
 
 <style>
 body {
-  background-color: lightblue;
+  background-color: lightsteelblue;
 }
 
 h1 {
   color: black;
-  text-align: center;
+  text-align: justify;
 }
 
 p {
   font-family: verdana;
   font-size: 20px;
 }
+
+}
+
+
 </style>
+
+<head> 
 
 <h1> <center> NIST Center for Neutron Research Data Directory </center>  </h1> 
 <h4> You will find the file and folder names below: </h4>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head> 
 
 <?php 
 
@@ -49,6 +59,7 @@ sort($dirArray);
 // Print them
 print("<TABLE border=1 cellpadding=5 cellspacing=0 class=whitelinks>\n");
 print("<TR><TH>Filename</TH> <th>Filetype</th> <th>Filesize</th> </TR>\n");
+
 
 // Loop through the array of files and print them all
 for($index=0; $index < $indexCount; $index++) {
