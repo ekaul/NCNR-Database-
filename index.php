@@ -7,8 +7,8 @@
 <h1> <center> NIST Center for Neutron Research Data Directory </center>  </h1> 
 <h4> You will find the file and folder names below: </h4>
 
-<!-- CSS Style Formatting -->
-<link rel="stylesheet" type="text/css" href="style.css">
+<!-- CSS Style Formatting/ Reference to External Style Sheet -->
+<link rel="stylesheet" type="text/css" href="/~esk2/style.css">
 
 </head> 
 
