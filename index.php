@@ -12,6 +12,37 @@
 
 </head> 
 
+<!-- Download All button & function -->
+
+<button id="download">Download</button> 
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <script type="text/javascript">
+
+     $('#download').click(function() {
+       download('http://nogin.info/cv.doc','http://nogin.info/cv.doc');
+     });
+
+     var download = function() {
+       for(var i=0; i<arguments.length; i++) {
+         var iframe = $('<iframe style="visibility: collapse;"></iframe>');
+         $('body').append(iframe);
+         var content = iframe[0].contentDocument;
+         var form = '<form action="' + arguments[i] + '" method="GET"></form>';
+         content.write(form);
+         $('form', content).submit();
+         setTimeout((function(iframe) {
+           return function() { 
+             iframe.remove(); 
+           }
+         })(iframe), 2000);
+       }
+     }      
+
+  </script>
+
+
+
 <?php 
 
 // Creates a path to the directory of each folder, instead of just the directory of index.php
@@ -28,6 +59,7 @@ while($entryName = readdir($myDirectory)) {
 
 // Close directory
 closedir($myDirectory);
+
 
 // Count elements in array
 $indexCount = count($dirArray);
