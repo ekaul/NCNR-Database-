@@ -1,5 +1,5 @@
 body { 
-background-color: rgb(172, 226, 240); 
+background-color: rgb(255, 255, 255); 
 font-family: Arial, Verdana, sans-serif; 
 font-size: 18px; 
 color: #00008B;
@@ -7,12 +7,12 @@ color: #00008B;
 
 a { font-family: Arial, Verdana, sans-serif; font-size: 18px; color: rgb(47, 37, 110); text-decoration: underline}
 
-a:hover { font-family: Arial, Verdana, sans-serif; font-size: 18px; color: rgb(7, 106, 131); background-color: #FAEBD7}
+a:hover { font-family: Arial, Verdana, sans-serif; font-size: 18px; color: rgb(15, 78, 214); background-color: #FAEBD7}
 
-h1 { font-family: Arial, Verdana, sans-serif; font-size: 32px; color: #A52A2A }
+h1 { font-family: Arial, Verdana, sans-serif; font-size: 32px; color: rgb(7, 106, 131) }
 h2 { font-family: Arial, Verdana, sans-serif; font-size: 24px; color: #A52A2A }
 
-hr{ color:rgb(7, 106, 131); background-color:tan; width:90%; height:2px; } 
+hr{ color:rgb(7, 106, 131); background-color:rgb(228, 203, 157); width:90%; height:2px; } 
 
 table {
 font-family: Arial, Verdana, sans-serif;
@@ -35,3 +35,17 @@ color: purple;
 font-weight: bold;
 } 
 
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(7, 106, 131);
+    color: white;
+    text-align: center;
+  }
+  </style>
+  
+  <div class="footer">
+    <p>Footer</p>
+  </div>
