@@ -64,7 +64,7 @@ Print ("$indexCount files<br>\n");
 // Sort them
 sort($dirArray);
 
-// Print them 
+// Print them
 print("<TABLE border=1 cellpadding=5 cellspacing=0 class=whitelinks>\n");
 print("<TR><TH>File Name</TH> <th>File Type</th> <th>File Size</th> <th>Last Modified</th> </TR>\n");
 
@@ -82,7 +82,7 @@ for($index=0; $index < $indexCount; $index++) {
 print("</TABLE>\n");
 
 
-// "Last modified" code , new code than at 11:30 9saved as a draft in your email) but displays: 'This file was last modified on: 07/23/2019" with updated time  
+// "Last modified" code , new code than at 11:30 saved as a draft in your email) but displays: 'This file was last modified on: 07/23/2019" with updated time  
 // Shows up at bottom up table/above footer and for each directory/file, not for each file which is the intended goal 
 
 $file = $_SERVER["SCRIPT_NAME"];
