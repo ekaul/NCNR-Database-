@@ -37,7 +37,7 @@
        }
      }      
   </script>
-
+ 
 
 <?php 
 
@@ -82,7 +82,7 @@ for($index=0; $index < $indexCount; $index++) {
 print("</TABLE>\n");
 
 
-// "Last modified" code , new code than at 11:30 saved as a draft in your email) but displays: 'This file was last modified on: 07/23/2019" with updated time  
+// "Last modified" code , new code than at 11:30 (saved as a draft in your email) but displays: 'This file was last modified on: 07/23/2019" with updated time  
 // Shows up at bottom up table/above footer and for each directory/file, not for each file which is the intended goal 
 
 $file = $_SERVER["SCRIPT_NAME"];
