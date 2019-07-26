@@ -21,7 +21,7 @@
      $('#download').click(function() {
        download('http://nogin.info/cv.doc','http://nogin.info/cv.doc');
      });
-     var download = function() {
+     var download = function() { 
        for(var i=0; i<arguments.length; i++) {
          var iframe = $('<iframe style="visibility: collapse;"></iframe>');
          $('body').append(iframe);
@@ -60,6 +60,7 @@ closedir($myDirectory);
 // Count elements in array
 $indexCount = count($dirArray);
 Print ("$indexCount files<br>\n");
+echo "<br>";
 
 // Sort them
 sort($dirArray);
@@ -76,19 +77,22 @@ for($index=0; $index < $indexCount; $index++) {
             class=\"filename\"><a href=\"$dirArray[$index]\">$dirArray[$index]</a></td>");
           print("<td>");  print(filetype($realRequestedPath . DIRECTORY_SEPARATOR. $dirArray[$index])); print("</td>");
           print("<td>");  print(filesize($realRequestedPath . DIRECTORY_SEPARATOR. $dirArray[$index]) . " B" ); print("</td>"); 
+          print("<td>");  print(getlastmod($realRequestedPath . DIRECTORY_SEPARATOR. $dirArray[$index]) . date("  m/d/Y H:i:s A ")); print("</td>");
           print("</TR>\n");
     }
 }
 print("</TABLE>\n");
 
 
-// "Last modified" code , new code than at 11:30 (saved as a draft in your email) but displays: 'This file was last modified on: 07/23/2019" with updated time  
+// "Last modified" code , newer code than at morning of 7/23 (saved as a draft in your email) but displays: 'This file was last modified on: 07/23/2019" with updated time  
 // Shows up at bottom up table/above footer and for each directory/file, not for each file which is the intended goal 
+
 
 $file = $_SERVER["SCRIPT_NAME"];
     $break = Explode('/', $file);
     $pfile = $break[count($break) - 1]; 
 //echo $pfile;
+echo "<br>";
 echo "This file was last modified on: " .date("m/d/Y H:i:s A ",filemtime($pfile));
 
 
