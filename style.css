@@ -16,7 +16,7 @@ hr{ color:rgb(7, 106, 131); background-color:rgb(228, 203, 157); width:90%; heig
 
 
 .button {
-  background-color: #008CBA; /* Green */
+  background-color: #008CBA; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -57,3 +57,4 @@ font-weight: bold;
     text-align: center;
   }
  
+  
