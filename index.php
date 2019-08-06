@@ -14,14 +14,15 @@
 
 <!--  Download All button & function/ This needs to be fixed, it doesn't work properly    -->
 
-<button id="download">Download</button> 
+<button id="download">Download All Files</button> 
+
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
   <script type="text/javascript">
      $('#download').click(function() {
        download('http://nogin.info/cv.doc','http://nogin.info/cv.doc');
      });
-     var download = function() { 
+     var download = function() {  
        for(var i=0; i<arguments.length; i++) {
          var iframe = $('<iframe style="visibility: collapse;"></iframe>');
          $('body').append(iframe);
@@ -39,7 +40,7 @@
   </script>
  
 
-<?php 
+<?php  
 
 // Creates a path to the directory of each folder, instead of just the directory of index.php
 $requestedpath = $_SERVER["REQUEST_URI"];
@@ -53,7 +54,7 @@ while($entryName = readdir($myDirectory)) {
     $dirArray[] = $entryName;
 }
 
-// Close directory
+// Close directory 
 closedir($myDirectory);
 
 
@@ -65,7 +66,7 @@ echo "<br>";
 // Sort them
 sort($dirArray);
 
-// Print them
+// Print them 
 print("<TABLE border=1 cellpadding=5 cellspacing=0 class=whitelinks>\n");
 print("<TR><TH>File Name</TH> <th>File Type</th> <th>File Size</th> <th>Last Modified</th> </TR>\n");
 
@@ -78,7 +79,7 @@ for($index=0; $index < $indexCount; $index++) {
 // Prints file type, size and last modification date/time in the table 
           print("<td>");  print(filetype($realRequestedPath . DIRECTORY_SEPARATOR. $dirArray[$index])); print("</td>");
           print("<td>");  print(filesize($realRequestedPath . DIRECTORY_SEPARATOR. $dirArray[$index]) . " B" ); print("</td>"); 
-          print("<td>"); print "".date("F d, Y H:i:s",filemtime($realRequestedPath . DIRECTORY_SEPARATOR. $dirArray[$index])); print("</td>");
+          print("<td>"); print "".date("F d, Y - H:i:s",filemtime($realRequestedPath . DIRECTORY_SEPARATOR. $dirArray[$index])); print("</td>");
           print("</TR>\n");
     }
 }
@@ -89,9 +90,8 @@ print("</TABLE>\n");
 
 <!-- Footer --> 
 <br/>
-<hr/>
-<div align="center">
-   <a href="http://www.nist.gov/" class="eplan">NIST</a> is an agency of the <a href="http://www.commerce.gov/">U.S. Department of Commerce.</a>
+<div class="footer" align="center">
+   <a href="http://www.nist.gov/" class="eplan">NIST</a> is an agency of the <a href="http://www.commerce.gov/">U.S. Department of Commerce.</a></font>
 </div>
 </div>
 </footer>
