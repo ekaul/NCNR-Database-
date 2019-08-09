@@ -14,15 +14,16 @@
 
 <!--  Download All button & function/ This needs to be fixed, it doesn't work properly    -->
 
-<button id="download">Download All Files</button> 
+<button id="download"> Download All Files</button> 
 
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
   <script type="text/javascript">
-     $('#download').click(function() {
-       download('http://nogin.info/cv.doc','http://nogin.info/cv.doc');
-     });
-     var download = function() {  
+
+$('#download').click(function() { 
+});
+
+var download = function() {  
        for(var i=0; i<arguments.length; i++) {
          var iframe = $('<iframe style="visibility: collapse;"></iframe>');
          $('body').append(iframe);
@@ -37,6 +38,9 @@
          })(iframe), 2000);
        }
      }      
+
+}  
+
   </script>
  
 
